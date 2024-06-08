@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+ZpVNBz4+K4H4pJ5f8H/WJk" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1535316954385-399d2486d808");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #000000;
+            padding-top: 80px;
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .project-section {
+            padding: 50px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #343a40;
+        }
+        
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+        }
+        
+        .portfolio-item {
+            width: 50%;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.3s ease-in-out;
+            background-color: #4c4c4c;
+            color: #ffffff;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .portfolio-item:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+        
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            object-fit: cover;
+        }
+        
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-item-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .portfolio-item-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .portfolio-item-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-item {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-item {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lucky-storm">Lucky Storm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cars4u">Cars4u</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#animals4u">Animals4u</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#to-do">To-Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tic-tac-toe">LocationGps</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="project-section" id="lucky-storm">
+
+            <a href="https://github.com/danitom1212/gamblingApp" class="work-link">
+                <h2 class="project-title">Lucky Storm</h2>
+                <div class="project-container">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-content">
+                            <h3 class="portfolio-item-title">Lucky Storm Game</h3>
+                            <p class="portfolio-item-description">
+                                Lucky Storm is an exciting arcade game where players navigate through various levels of increasing difficulty. Using intuitive controls, players must avoid obstacles and collect power-ups to achieve the highest score possible.
+                            </p>
+                            <img src="https://i.ibb.co/JmVqdWm/game-01.png" alt="game-01" />
+                            <img src="https://i.ibb.co/Rv0sbk1/game-02.png" alt="game-02" />
+                            <img src="https://i.ibb.co/mq9FdcD/game-03.png" alt="game-03" />
+                            <img src="https://i.ibb.co/bLvN5Mr/game-05.png" alt="game-05" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="project-section" id="cars4u">
+            <a href="https://github.com/danitom1212/cars" class="work-link">
+                <h2 class="project-title">Cars4u</h2>
+                <div class="project-container">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-content">
+                            <h3 class="portfolio-item-title">Cars4u Website</h3>
+                            <p class="portfolio-item-description">
+                                Cars4u is a multi-page web application for showcasing and potentially selling luxury cars from brands like BMW, Bentley, and Mercedes-Benz. Built using HTML5, CSS3, JavaScript, Bootstrap for responsive design, and jQuery for interactivity, it provides
+                                an engaging user experience.
+                            </p>
+                            <img src="https://i.ibb.co/4fvkvcY/car-sign-Up.png" alt="car-sign-Up" />
+                            <img src="https://i.ibb.co/FYLWM4x/car.png" alt="car" />
+                            <img src="https://i.ibb.co/HBYb3DG/2024-06-08-190254.png" alt="2024-06-08-190254" />
+                            <img src="https://i.ibb.co/nc0r8T3/cars-home.png" alt="cars-home" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-section" id="animals4u">
+            <a href="https://github.com/danitom1212/animels" class="work-link">
+                <h2 class="project-title">Animals4u</h2>
+
+                <div class="project-container">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-content">
+                            <h3 class="portfolio-item-title">Animals4u Website</h3>
+                            <p class="portfolio-item-description">
+                                Animals4u is a website dedicated to animal lovers. It features a comprehensive database of animals, allowing users to explore various species, read interesting facts, and view high-quality images. The site is designed using HTML, CSS, and JavaScript with
+                                Bootstrap for responsiveness.
+                            </p>
+                            <img src="https://i.ibb.co/TRFjCS8/animel-1.jpg" alt="animel-1" />
+                            <img src="https://i.ibb.co/FbBSZ41/toolbar.png" alt="toolbar" />
+                            <img src="https://i.ibb.co/tcrYnNg/animel-2.jpg" alt="animel-2" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="project-section" id="to-do">
+            <a href="https://github.com/danitom1212/To-do" class="work-link"></a>
+            <h2 class="project-title">TO-DO</h2>
+            <div class="project-container">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-content">
+                        <h3 class="portfolio-item-title">To-Do List Application</h3>
+                        <p class="portfolio-item-description">
+                            This is a simple web-based To-Do List application built using HTML, CSS, and JavaScript, with Bootstrap for styling. Users can perform basic operations like adding tasks, viewing tasks, deleting specific tasks, and ending the program.
+                        </p>
+                        <img src="https://i.ibb.co/bm4p09x/todo-1.png" alt="todo-1" />
+                        <img src="https://i.ibb.co/FKQFkvN/todo-02.png" alt="todo-02" />
+                        <img src="https://i.ibb.co/xJHC5RB/todo-03.png" alt="todo-03" />
+                        <img src="https://i.ibb.co/Vpv7Lbb/todo-04.png" alt="todo-04" />
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+
+        <div class="project-section" id="LocationGps">
+            <a href="https://github.com/danitom1212/LocationGps" class="work-link">
+                <h2 class="project-title">LocationGps</h2>
+
+                <div class="project-container">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-content">
+                            <h3 class="portfolio-item-title">LocationGps</h3>
+                            <p class="portfolio-item-description">
+                                show your Location with gps maps and if you wanna to change your Location you can change it.
+                            </p>
+                            <!-- Add Tic Tac Toe project images here -->
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
