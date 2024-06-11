@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+ZpVNBz4+K4H4pJ5f8H/WJk" crossorigin="anonymous" />
     <!-- Custom CSS -->
     <style>
+        /* Custom CSS */
+        
         body {
             font-family: Arial, sans-serif;
-            background-image: url("https://images.unsplash.com/photo-1535316954385-399d2486d808");
-            background-size: cover;
+            background-image: URL("https://images.unsplash.com/photo-1535316954385-399d2486d808");
+            background-size cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -37,6 +39,30 @@
             margin-bottom: 20px;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ced4da;
+            overflow: hidden;
+        }
+        /* Mobile adjustments */
+        
+        @media (max-width: 768px) {
+            .project-section {
+                padding: 20px;
+            }
+            .project-title {
+                font-size: 28px;
+            }
+            .carousel-item img {
+                max-height: 300px;
+            }
+            .navbar-brand {
+                font-size: 20px;
+            }
+            .navbar-nav .nav-item .nav-link {
+                font-size: 16px;
+            }
+            body {
+                padding-top: 60px;
+            }
         }
         
         .project-title {
@@ -47,216 +73,590 @@
             color: #343a40;
         }
         
-        .project-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: stretch;
-        }
-        
-        .portfolio-item {
-            width: 50%;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transition: box-shadow 0.3s ease-in-out;
-            background-color: #4c4c4c;
-            color: #ffffff;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .portfolio-item:hover {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        }
-        
-        .portfolio-item img {
-            max-width: 100%;
-            height: auto;
+        .carousel-item img {
+            max-height: 1000px;
+            width: auto;
             display: block;
-            transition: transform 0.3s ease-in-out;
-            object-fit: cover;
+            margin: 0 auto;
         }
         
-        .portfolio-item img:hover {
-            transform: scale(1.05);
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
         }
         
-        .portfolio-item-content {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-        
-        .portfolio-item-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        
-        .portfolio-item-description {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 992px) {
-            .portfolio-item {
-                width: calc(50% - 20px);
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .portfolio-item {
-                width: calc(100% - 20px);
-            }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000000;
+            border-radius: 50%;
+            padding: 10px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#lucky-storm">Lucky Storm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cars4u">Cars4u</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#animals4u">Animals4u</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#to-do">To-Do</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tic-tac-toe">LocationGps</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Page Content -->
     <div class="container">
-        <div class="project-section" id="lucky-storm">
-
-            <a href="https://github.com/danitom1212/gamblingApp" class="work-link">
-                <h2 class="project-title">Lucky Storm</h2>
-                <div class="project-container">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-content">
-                            <h3 class="portfolio-item-title">Lucky Storm Game</h3>
-                            <p class="portfolio-item-description">
-                                Lucky Storm is an exciting arcade game where players navigate through various levels of increasing difficulty. Using intuitive controls, players must avoid obstacles and collect power-ups to achieve the highest score possible.
-                            </p>
-                            <img src="https://i.ibb.co/JmVqdWm/game-01.png" alt="game-01" />
-                            <img src="https://i.ibb.co/Rv0sbk1/game-02.png" alt="game-02" />
-                            <img src="https://i.ibb.co/mq9FdcD/game-03.png" alt="game-03" />
-                            <img src="https://i.ibb.co/bLvN5Mr/game-05.png" alt="game-05" />
-                        </div>
-                    </div>
-                </div>
-        </div>
-
         <div class="project-section" id="cars4u">
-            <a href="https://github.com/danitom1212/cars" class="work-link">
-                <h2 class="project-title">Cars4u</h2>
-                <div class="project-container">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-content">
-                            <h3 class="portfolio-item-title">Cars4u Website</h3>
-                            <p class="portfolio-item-description">
+            <h2 class="project-title">Cars4u</h2>
+            <div id="carouselCars4u" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://i.ibb.co/4fvkvcY/car-sign-Up.png" class="d-block w-100" alt="car-sign-Up" />
+                        <br />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cars4u Website</h5>
+
+                            <p>
                                 Cars4u is a multi-page web application for showcasing and potentially selling luxury cars from brands like BMW, Bentley, and Mercedes-Benz. Built using HTML5, CSS3, JavaScript, Bootstrap for responsive design, and jQuery for interactivity, it provides
                                 an engaging user experience.
                             </p>
-                            <img src="https://i.ibb.co/4fvkvcY/car-sign-Up.png" alt="car-sign-Up" />
-                            <img src="https://i.ibb.co/FYLWM4x/car.png" alt="car" />
-                            <img src="https://i.ibb.co/HBYb3DG/2024-06-08-190254.png" alt="2024-06-08-190254" />
-                            <img src="https://i.ibb.co/nc0r8T3/cars-home.png" alt="cars-home" />
                         </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="project-section" id="animals4u">
-            <a href="https://github.com/danitom1212/animels" class="work-link">
-                <h2 class="project-title">Animals4u</h2>
-
-                <div class="project-container">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-content">
-                            <h3 class="portfolio-item-title">Animals4u Website</h3>
-                            <p class="portfolio-item-description">
-                                Animals4u is a website dedicated to animal lovers. It features a comprehensive database of animals, allowing users to explore various species, read interesting facts, and view high-quality images. The site is designed using HTML, CSS, and JavaScript with
-                                Bootstrap for responsiveness.
-                            </p>
-                            <img src="https://i.ibb.co/TRFjCS8/animel-1.jpg" alt="animel-1" />
-                            <img src="https://i.ibb.co/FbBSZ41/toolbar.png" alt="toolbar" />
-                            <img src="https://i.ibb.co/tcrYnNg/animel-2.jpg" alt="animel-2" />
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="project-section" id="to-do">
-            <a href="https://github.com/danitom1212/To-do" class="work-link"></a>
-            <h2 class="project-title">TO-DO</h2>
-            <div class="project-container">
-                <div class="portfolio-item">
-                    <div class="portfolio-item-content">
-                        <h3 class="portfolio-item-title">To-Do List Application</h3>
-                        <p class="portfolio-item-description">
-                            This is a simple web-based To-Do List application built using HTML, CSS, and JavaScript, with Bootstrap for styling. Users can perform basic operations like adding tasks, viewing tasks, deleting specific tasks, and ending the program.
-                        </p>
-                        <img src="https://i.ibb.co/bm4p09x/todo-1.png" alt="todo-1" />
-                        <img src="https://i.ibb.co/FKQFkvN/todo-02.png" alt="todo-02" />
-                        <img src="https://i.ibb.co/xJHC5RB/todo-03.png" alt="todo-03" />
-                        <img src="https://i.ibb.co/Vpv7Lbb/todo-04.png" alt="todo-04" />
-                    </div>
-                </div>
+                        <div class="github-btn">
+                            <a href="https://github.com/danitom1212/cars" class="btn btn-primary" target="_blank">GitHub</a
+                >
+              </div>
             </div>
-            </a>
-        </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/FYLWM4x/car.png"
+                class="d-block w-100"
+                alt="car"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Cars4u Website</h5>
 
+                <p>
+                  Cars4u is a multi-page web application for showcasing and
+                  potentially selling luxury cars from brands like BMW, Bentley,
+                  and Mercedes-Benz. Built using HTML5, CSS3, JavaScript,
+                  Bootstrap for responsive design, and jQuery for interactivity,
+                  it provides an engaging user experience.
+                </p>
+              </div>
+              <div class="github-btn">
+                <a
+                  href="https://github.com/danitom1212/cars"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/HBYb3DG/2024-06-08-190254.png"
+                class="d-block w-100"
+                alt="2024-06-08-190254"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Cars4u Website</h5>
 
-        <div class="project-section" id="LocationGps">
-            <a href="https://github.com/danitom1212/LocationGps" class="work-link">
-                <h2 class="project-title">LocationGps</h2>
+                <p>
+                  Cars4u is a multi-page web application for showcasing and
+                  potentially selling luxury cars from brands like BMW, Bentley,
+                  and Mercedes-Benz. Built using HTML5, CSS3, JavaScript,
+                  Bootstrap for responsive design, and jQuery for interactivity,
+                  it provides an engaging user experience.
+                </p>
+              </div>
+              <div class="github-btn">
+                <a
+                  href="https://github.com/danitom1212/cars"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/nc0r8T3/cars-home.png"
+                class="d-block w-100"
+                alt="cars-home"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Cars4u Website</h5>
 
-                <div class="project-container">
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-content">
-                            <h3 class="portfolio-item-title">LocationGps</h3>
-                            <p class="portfolio-item-description">
-                                show your Location with gps maps and if you wanna to change your Location you can change it.
-                            </p>
-                            <!-- Add Tic Tac Toe project images here -->
+                <p>
+                  Cars4u is a multi-page web application for showcasing and
+                  potentially selling luxury cars from brands like BMW, Bentley,
+                  and Mercedes-Benz. Built using HTML5, CSS3, JavaScript,
+                  Bootstrap for responsive design, and jQuery for interactivity,
+                  it provides an engaging user experience.
+                </p>
+              </div>
+              <div class="github-btn">
+                <a
+                  href="https://github.com/danitom1212/cars"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselCars4u"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+                            <a class="carousel-control-next" href="#carouselCars4u" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
-                </div>
-        </div>
-        </a>
-    </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+                    <div class="project-section" id="animals4u">
+                        <h2 class="project-title">Animals4u</h2>
+                        <div id="carouselAnimals4u" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://i.ibb.co/TRFjCS8/animel-1.jpg" class="d-block w-100" alt="animal-1" />
+                                    <br />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Animals4u Website</h5>
+
+                                        <p>
+                                            Animals4u is a website dedicated to animal lovers. It features a comprehensive database of animals, allowing users to explore various species, read interesting facts, and view high-quality images. The site is designed using HTML, CSS, and JavaScript with
+                                            Bootstrap for responsiveness.
+                                        </p>
+                                    </div>
+                                    <div class="github-btn">
+                                        <a href="https://github.com/danitom1212/animels" class="btn btn-primary" target="_blank">GitHub</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/FbBSZ41/toolbar.png"
+                class="d-block w-100"
+                alt="toolbar"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Animals4u Website</h5>
+
+                <p>
+                  Animals4u is a website dedicated to animal lovers. It features
+                  a comprehensive database of animals, allowing users to explore
+                  various species, read interesting facts, and view high-quality
+                  images. The site is designed using HTML, CSS, and JavaScript
+                  with Bootstrap for responsiveness.
+                </p>
+              </div>
+              <div class="github-btn">
+                <a
+                  href="https://github.com/danitom1212/animels"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/tcrYnNg/animel-2.jpg"
+                class="d-block w-100"
+                alt="animal-2"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Animals4u Website</h5>
+                <p>
+                  Animals4u is a website dedicated to animal lovers. It features
+                  a comprehensive database of animals, allowing users to explore
+                  various species, read interesting facts, and view high-quality
+                  images. The site is designed using HTML, CSS, and JavaScript
+                  with Bootstrap for responsiveness.
+                </p>
+              </div>
+              <div class="github-btn">
+                <a
+                  href="https://github.com/danitom1212/animels"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselAnimals4u"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+                                        <a class="carousel-control-next" href="#carouselAnimals4u" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="project-section" id="to-do">
+                                    <h2 class="project-title">TO-DO</h2>
+                                    <div id="carouselTodo" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://i.ibb.co/bm4p09x/todo-1.png" class="d-block w-100" alt="todo-1" />
+                                                <br />
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5>To-Do List Application</h5>
+                                                    <p>
+                                                        This simple web-based To-Do List application built using HTML, CSS, and JavaScript, with Bootstrap for styling. Users can perform basic operations like adding tasks, viewing tasks, deleting specific tasks, and ending the program.
+                                                    </p>
+                                                </div>
+                                                <div class="github-btn">
+                                                    <a href="https://github.com/danitom1212/To-do" class="btn btn-primary" target="_blank">Git Hub</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img src="https://i.ibb.co/FKQFkvN/todo-02.png" class="d-block w-100" alt="todo-02" />
+                                                <br />
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5>To-Do List Application</h5>
+
+                                                    <p>
+                                                        This simple web-based To-Do List application built using HTML, CSS, and JavaScript, with Bootstrap for styling. Users can perform basic operations like adding tasks, viewing tasks, deleting specific tasks, and ending the program.
+                                                    </p>
+                                                </div>
+                                                <div class="github-btn">
+                                                    <a href="https://github.com/danitom1212/To-do" class="btn btn-primary" target="_blank">Git Hub</a
+                >
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="https://i.ibb.co/xJHC5RB/todo-03.png"
+                class="d-block w-100"
+                alt="todo-03"
+              />
+              <br />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>To-Do List Application</h5>
+                <p>
+                  This simple web-based To-Do List application built using HTML,
+                  CSS, and JavaScript, with Bootstrap for styling. Users can
+                  perform basic operations like adding tasks, viewing tasks,
+                  deleting specific tasks, and ending the program.
+                </p>
+              </div>
+              <div>
+                <div class="github-btn">
+                  <a
+                    href="https://github.com/danitom1212/To-do"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Git Hub</a
+                  >
+                </div>
+              </div>
+              &lt;
+              <div class="carousel-item">
+                <img
+                  src="https://i.ibb.co/Vpv7Lbb/todo-04.png"
+                  class="d-block w-100"
+                  alt="todo-04"
+                />
+                <br />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>To-Do List Application</h5>
+
+                  <p>
+                    This simple web-based To-Do List application built using
+                    HTML, CSS, and JavaScript, with Bootstrap for styling. Users
+                    can perform basic operations like adding tasks, viewing
+                    tasks, deleting specific tasks, and ending the program.
+                  </p>
+
+                  <div class="github-btn">
+                    <a
+                      href="https://github.com/danitom1212/To-do"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >Git Hub</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselTodo"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+                                                    <a class="carousel-control-next" href="#carouselTodo" role="button" data-slide="next">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-section" id="LocationGps">
+                                        <h2 class="project-title">LocationGps</h2>
+                                        <div id="carouselLocationGps" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="https://i.ibb.co/bm4p09x/todo-1.png" class="d-block w-100" alt="location-01" />
+                                                    <br />
+                                                    <div class="carousel-caption d-none d-md-block">
+                                                        <h5>LocationGps</h5>
+
+                                                        <p>
+                                                            Show your location with GPS maps;; if you want to change your location,, you can change it.
+                                                        </p>
+                                                    </div>
+                                                    <div class="github-btn">
+                                                        <a href="https://github.com/danitom1212/LocationGps" class="btn btn-primary" target="_blank">GitHub</a
+                    >
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="https://i.ibb.co/FKQFkvN/todo-02.png"
+                    class="d-block w-100"
+                    alt="location-02"
+                  />
+                  <br />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>LocationGps</h5>
+
+                    <p>
+                      Show your location with GPS ma; ifif you want to change
+                      your locati,on you can change it.
+                    </p>
+                  </div>
+                  <div class="github-btn">
+                    <a
+                      href="https://github.com/danitom1212/LocationGps"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="https://i.ibb.co/xJHC5RB/todo-03.png"
+                    class="d-block w-100"
+                    alt="location-03"
+                  />
+                  <br />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>LocationGps</h5>
+
+                    <p>
+                      Show your location with GPS ma; ifif you want to change
+                      your locati,on you can change it.
+                    </p>
+                  </div>
+                  <div class="github-btn">
+                    <a
+                      href="https://github.com/danitom1212/LocationGps"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="https://i.ibb.co/Vpv7Lbb/todo-04.png"
+                    class="d-block w-100"
+                    alt="location-04"
+                  />
+                  <br />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>LocationGps</h5>
+                    <p>
+                      Show your location with GPS maps; you can change it if you
+                      want to change your location.
+                    </p>
+                  </div>
+                  <div class="github-btn">
+                    <a
+                      href="https://github.com/danitom1212/LocationGps"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselLocationGps"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                                                        <a class="carousel-control-next" href="#carouselLocationGps" role="button" data-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="sr-only">Next</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="project-section" id="lucky-storm">
+                                                <h2 class="project-title">Lucky Storm</h2>
+                                                <div id="carouselLuckyStorm" class="carousel slide" data-ride="carousel">
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+                                                            <img src="https://i.ibb.co/JmVqdWm/game-01.png" class="d-block w-100" alt="game-01" />
+                                                            <br />
+                                                            <div class="carousel-caption d-none d-md-block">
+                                                                <h5>Lucky Storm Game</h5>
+
+                                                                <p>
+                                                                    Lucky Storm is an exciting arcade game where players navigate through various levels of increasing difficulty. Using intuitive controls, players must avoid obstacles and collect power-ups to achieve the highest score possible.
+                                                                </p>
+                                                            </div>
+                                                            <div class="github-btn">
+                                                                <a href="https://github.com/danitom1212/gamblingApp" class="btn btn-primary" target="_blank">GitHub</a
+                      >
+                    </div>
+                  </div>
+</div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.ibb.co/Rv0sbk1/game-02.png"
+                      class="d-block w-100"
+                      alt="game-02"
+                    />
+                    <br />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Lucky Storm Game</h5>
+
+                      <p>
+                        Lucky Storm is an exciting arcade game where players
+                        navigate through various levels of increasing
+                        difficulty. Using intuitive controls, players must avoid
+                        obstacles and collect power-ups to achieve the highest
+                        score possible.
+                      </p>
+                    </div>
+                    <div class="github-btn">
+                      <a
+                        href="https://github.com/danitom1212/gamblingApp"
+                        class="btn btn-primary"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.ibb.co/mq9FdcD/game-03.png"
+                      class="d-block w-100"
+                      alt="game-03"
+                    />
+                    <br />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Lucky Storm Game</h5>
+
+                      <p>
+                        Lucky Storm is an exciting arcade game where players
+                        navigate through various levels of increasing
+                        difficulty. Using intuitive controls, players must avoid
+                        obstacles and collect power-ups to achieve the highest
+                        score possible.
+                      </p>
+                    </div>
+                    <div class="github-btn">
+                      <a
+                        href="https://github.com/danitom1212/gamblingApp"
+                        class="btn btn-primary"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://i.ibb.co/bLvN5Mr/game-05.png"
+                      class="d-block w-100"
+                      alt="game-05"
+                    />
+                    <br />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Lucky Storm Game</h5>
+
+                      <p>
+                        Lucky Storm is an exciting arcade game where players
+                        navigate through various levels of increasing
+                        difficulty. Using intuitive controls, players must avoid
+                        obstacles and collect power-ups to achieve the highest
+                        score possible.
+                      </p>
+                    </div>
+                    <div class="github-btn">
+                      <a
+                        href="https://github.com/danitom1212/gamblingApp"
+                        class="btn btn-primary"
+                        target="_blank"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselLuckyStorm"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                                                                <a class="carousel-control-next" href="#carouselLuckyStorm" role="button" data-slide="next">
+                                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span class="sr-only">Next</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Bootstrap JS and dependencies -->
+                                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                                                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 </body>
 
 </html>
